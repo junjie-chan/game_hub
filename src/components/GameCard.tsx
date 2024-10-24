@@ -17,7 +17,7 @@ const GameCard = ({ game }: Props) => {
         flexDirection="column"
         justifyContent="space-between"
       >
-        <Heading fontSize="2xl" marginBottom={2} noOfLines={3}>
+        <Heading fontSize="2xl" marginBottom={2} noOfLines={{ lg: 2 }}>
           {game.name}
         </Heading>
         <HStack justifyContent="space-between">
