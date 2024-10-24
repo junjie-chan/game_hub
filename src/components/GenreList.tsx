@@ -19,7 +19,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
       {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
       {data.map((genre) => (
-        <ListItem key={genre.id} marginY={1.5}>
+        <ListItem key={genre.id} marginY={5}>
           <HStack>
             <Image
               src={getCroppedImageUrl(genre.image_background)}
