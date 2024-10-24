@@ -10,8 +10,9 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { Platform } from "../hooks/useGames";
-import { HStack, Icon } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons";
+import CriticScoreScrollContainer from "./CriticScoreScrollContainer";
 
 interface Props {
   platforms: Platform[];
@@ -31,11 +32,11 @@ const PlatformIconList = ({ platforms }: Props) => {
   };
 
   return (
-    <HStack wrap="wrap" maxWidth={{ xl: "140px" }}>
+    <CriticScoreScrollContainer>
       {platforms.map((platform) => (
         <Icon as={iconMap[platform.slug]} color="gray.500" key={platform.id} />
       ))}
-    </HStack>
+    </CriticScoreScrollContainer>
   );
 };
 
