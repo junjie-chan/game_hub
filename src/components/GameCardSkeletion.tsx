@@ -1,11 +1,11 @@
 import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react";
 
-const GameCardSkeletion = () => {
+const GameCardSkeleton = () => {
   return (
     <Card>
       <Skeleton
         height={{
-          xl: "135px",
+          xl: "155px",
           lg: "165px",
           md: "240px",
           sm: "295px",
@@ -14,11 +14,16 @@ const GameCardSkeletion = () => {
       />
       <CardBody>
         <SkeletonText
+          marginTop={{ md: 2, sm: 1.3, base: 1.9 }}
+          noOfLines={{ lg: 2, base: 1 }}
+          spacing={2.5}
+          skeletonHeight="22px"
+          width="180px"
           height={{
-            xl: "125px",
+            xl: "105px",
             lg: "95px",
-            md: "55px",
-            sm: "60px",
+            md: "48px",
+            sm: "50px",
             base: "62px",
           }}
         />
@@ -27,4 +32,4 @@ const GameCardSkeletion = () => {
   );
 };
 
-export default GameCardSkeletion;
+export default GameCardSkeleton;
