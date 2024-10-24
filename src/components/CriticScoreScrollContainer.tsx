@@ -33,7 +33,7 @@ const CriticScoreScrollContainer = ({ children }: Props) => {
       ref={scrollRef}
       overflowX="auto"
       whiteSpace="nowrap"
-      w="73.5%"
+      w="70%"
       css={{ "&::-webkit-scrollbar": { display: "none" } }} // Hide scroll bar
     >
       {children}
