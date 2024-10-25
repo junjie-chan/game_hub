@@ -44,9 +44,13 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Box marginLeft={5}>
+        <Box marginLeft={5} marginRight={5}>
           <GameHeading gameQuery={gameQuery} />
-          <HStack spacing={5} marginBottom={2}>
+          <HStack
+            spacing={{ sm: 5 }}
+            marginBottom={2}
+            justifyContent={{ sm: "initial", base: "space-between" }}
+          >
             <PlatformSelector
               onSelectPlatform={(platform) =>
                 setGameQuery({ ...gameQuery, platform })
