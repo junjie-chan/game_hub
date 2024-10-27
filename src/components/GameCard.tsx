@@ -1,4 +1,3 @@
-import { Game } from "../hooks/useGames";
 import {
   Card,
   CardBody,
@@ -7,9 +6,10 @@ import {
   Image,
   useColorMode,
 } from "@chakra-ui/react";
-import PlatformIconList from "./PlatformIconList";
-import CriticScore from "./CriticScore";
+import { Game } from "../hooks/useGames";
 import getCroppedImageUrl from "../services/image-url";
+import CriticScore from "./CriticScore";
+import PlatformIconList from "./PlatformIconList";
 
 interface Props {
   game: Game;
