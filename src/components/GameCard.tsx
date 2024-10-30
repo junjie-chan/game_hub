@@ -10,6 +10,7 @@ import { Game } from "../hooks/useGames";
 import getCroppedImageUrl from "../services/image-url";
 import CriticScore from "./CriticScore";
 import PlatformIconList from "./PlatformIconList";
+import { Link } from "react-router-dom";
 
 interface Props {
   game: Game;
@@ -36,7 +37,7 @@ const GameCard = ({ game }: Props) => {
         </HStack>
 
         <Heading fontSize="2xl" noOfLines={{ lg: 2 }}>
-          {game.name}
+          <Link to={`/games/${game.slug}`}>{game.name}</Link>
         </Heading>
       </CardBody>
     </Card>
