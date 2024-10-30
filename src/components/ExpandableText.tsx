@@ -1,5 +1,5 @@
-import { Button, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Button } from "@chakra-ui/react";
+import { useState } from "react";
 
 interface Props {
   wordLimit?: number;
