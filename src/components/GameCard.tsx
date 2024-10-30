@@ -6,7 +6,7 @@ import {
   Image,
   useColorMode,
 } from "@chakra-ui/react";
-import { Game } from "../hooks/useGames";
+import { Game } from "../enterties/Game";
 import getCroppedImageUrl from "../services/image-url";
 import CriticScore from "./CriticScore";
 import PlatformIconList from "./PlatformIconList";
