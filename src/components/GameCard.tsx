@@ -20,27 +20,29 @@ const GameCard = ({ game }: Props) => {
   const { colorMode } = useColorMode();
 
   return (
-    <Card
-      height={{ lg: "285px" }}
-      variant={colorMode === "dark" ? "filled" : "outline"}
-    >
-      <Image src={getCroppedImageUrl(game.background_image)} />
-      <CardBody>
-        <HStack
-          justifyContent="space-between"
-          marginBottom={game.parent_platforms.length === 0 ? 6 : 2}
-        >
-          <PlatformIconList
-            platforms={game.parent_platforms.map((p) => p.platform)}
-          />
-          <CriticScore score={game.metacritic} />
-        </HStack>
+    <Link to={`/games/${game.slug}`}>
+      <Card
+        height={{ lg: "285px" }}
+        variant={colorMode === "dark" ? "filled" : "outline"}
+      >
+        <Image src={getCroppedImageUrl(game.background_image)} />
+        <CardBody className="game-card-body">
+          <HStack
+            justifyContent="space-between"
+            marginBottom={game.parent_platforms.length === 0 ? 6 : 2}
+          >
+            <PlatformIconList
+              platforms={game.parent_platforms.map((p) => p.platform)}
+            />
+            <CriticScore score={game.metacritic} />
+          </HStack>
 
-        <Heading fontSize="2xl" noOfLines={{ lg: 2 }}>
-          <Link to={`/games/${game.slug}`}>{game.name}</Link>
-        </Heading>
-      </CardBody>
-    </Card>
+          <Heading fontSize="2xl" noOfLines={{ lg: 2 }}>
+            {game.name}
+          </Heading>
+        </CardBody>
+      </Card>
+    </Link>
   );
 };
 
