@@ -6,11 +6,11 @@ import {
   Image,
   useColorMode,
 } from "@chakra-ui/react";
-import { Game } from "../enterties/Game";
+import { Link } from "react-router-dom";
+import Game from "../enterties/Game";
 import getCroppedImageUrl from "../services/image-url";
 import CriticScore from "./CriticScore";
 import PlatformIconList from "./PlatformIconList";
-import { Link } from "react-router-dom";
 
 interface Props {
   game: Game;
