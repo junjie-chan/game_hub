@@ -4,7 +4,7 @@ const ColorModeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <HStack marginLeft={10}>
+    <HStack marginLeft={{ base: 2, md: 10 }}>
       <Switch
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
