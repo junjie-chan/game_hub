@@ -1,7 +1,23 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import {
+  extendTheme,
+  Icon,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  ThemeConfig,
+} from "@chakra-ui/react";
+import type { StyleFunctionProps } from "@chakra-ui/styled-system";
+import { mode } from "@chakra-ui/theme-tools";
+import Styles from "./default-styles";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
+};
+
+const textColorMode = {
+  baseStyle: (props: StyleFunctionProps) => ({
+    color: mode(Styles.darkModeTextColor, Styles.lightModeTextColor)(props),
+  }),
 };
 
 const theme = extendTheme({
@@ -19,6 +35,11 @@ const theme = extendTheme({
       800: "#121212",
       900: "#111",
     },
+  },
+  components: {
+    Heading: textColorMode,
+    Icon: textColorMode,
+    Text: textColorMode,
   },
 });
 

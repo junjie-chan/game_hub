@@ -34,7 +34,11 @@ const PlatformIconList = ({ platforms }: Props) => {
   return (
     <CriticScoreScrollContainer>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="gray.500" key={platform.id} />
+        <Icon
+          as={iconMap[platform.slug]}
+          key={platform.id}
+          className="game-card-icon"
+        />
       ))}
     </CriticScoreScrollContainer>
   );
