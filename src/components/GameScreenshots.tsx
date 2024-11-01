@@ -20,7 +20,7 @@ const GameScreenshots = ({ gameId }: Props) => {
           borderRadius={8}
           transition="all 0.15s ease-in-out"
           _hover={{
-            transform: "scale(1.01)",
+            transform: "scale(1.02)",
           }}
         />
       ))}
